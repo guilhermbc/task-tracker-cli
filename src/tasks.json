@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "description": "Study Databases",
+        "status": "todo",
+        "createdAt": "2026-09-13T18:42:10.913387",
+        "updatedAt": "2026-09-13T18:42:10.913387"
+    },
+    {
+        "id": 2,
+        "description": "Play Overwatch",
+        "status": "todo",
+        "createdAt": "2026-09-13T18:42:32.685081",
+        "updatedAt": "2026-09-13T18:42:32.685081"
+    },
+    {
+        "id": 3,
+        "description": "dasda",
+        "status": "todo",
+        "createdAt": "2026-09-13T18:42:43.237233",
+        "updatedAt": "2026-09-13T18:42:43.237233"
+    }
+]
