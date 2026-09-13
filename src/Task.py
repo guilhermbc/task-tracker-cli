@@ -17,6 +17,9 @@ class Task:
         self.updatedAt = updatedAt or now
         self.status = status # 'todo', 'in-progress', 'done'
 
+    def __str__(self):
+        return (f'{self.id} - {self.description}')
+    
     def mark_todo(self):
         self.status = 'todo'
         self.touch()

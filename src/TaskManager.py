@@ -19,11 +19,12 @@ class TaskManager:
                 data = json.load(file)
                 for item in data:
                     self.tasks.append(Task.from_dict(item))
+
         except (json.JSONDecodeError, KeyError):
             self.tasks = []
 
     def save_tasks(self):
-        """Save the tasks on the tasks.json file"""
+        """Saves the tasks on the tasks.json file"""
         data = []
 
         with open(self.file_path, 'w', encoding='utf-8') as file:
@@ -69,8 +70,10 @@ class TaskManager:
 
     def list_tasks(self, status_filter: str | None = None):
         """Lists all task or filters by the specified status"""
-        filtered_tasks = []
+        filtered_tasks = self.tasks
+
         if status_filter:
+            filtered_tasks = []
             for task in self.tasks:
                 if task.status == status_filter:
                     filtered_tasks.append(task)

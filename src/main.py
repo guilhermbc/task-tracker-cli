@@ -61,11 +61,20 @@ def main():
                 manager.update_task_status(int(id), 'done')
 
             # Captures: task-cli list [status]
-            case ['list', status]:
-                manager.list_tasks(status)
-
             case ['list']:
                 manager.list_tasks()
+
+            case ['list', 'todo']:
+                manager.list_tasks('todo')
+
+            case ['list', 'in-progress']:
+                manager.list_tasks('in-progress')
+
+            case ['list', 'done']:
+                manager.list_tasks('done')
+
+            case ["list", invalid_status]:
+                print(f"\033[31mInvalid filter '{invalid_status}'. Use: done, todo or in-progress.\033[0m")
 
             # Default case: uknkown command
             case [command, *_]:
