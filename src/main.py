@@ -41,7 +41,7 @@ def main():
             case ['update', id, new_description] if new_description.strip():
                 manager.update_task_description(int(id), new_description)
 
-            case ['update']:
+            case ['update', something]:
                 print('\033[31mError: Missing parameter(s) (id and/or description).')
 
             # Captures: task-cli delete <id>
